@@ -1,0 +1,8 @@
+/target/
+/.settings/
+.DS_Store
+.cache-main
+.cache-tests
+.classpath
+.project
+bible
