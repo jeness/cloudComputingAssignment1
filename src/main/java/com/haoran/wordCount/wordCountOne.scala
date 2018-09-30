@@ -38,7 +38,7 @@ object wordCountOne {
  
       wordscount.collect.foreach(println)  // printout result in console, collect will make result be collected to the master
 //      wordscount.saveAsTextFile("gs://ufcloudcomputing/wordcountOneOutputFolder/") //save result as two workers result and wrap up in a folder
-      wordscount.coalesce(1).saveAsTextFile("gs://ufcloudcomputing/wordcountOneOutput.txt") //save and merge result as one file
+      wordscount.coalesce(1).saveAsTextFile("gs://ufcloudcomputing/wordcountOneOutput_OneFlie") //save and merge result as one file
       sc.stop()   // release resource
  
    }
