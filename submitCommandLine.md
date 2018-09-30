@@ -1,8 +1,8 @@
 1. show content
 gsutil cat gs://ufcloudcomputing/wordCountTwo.py
 2. submit to run
-+ task1
-use web ui to submit
++ task1 <br>
+Use web ui to submit
 + task2
 ```
 gcloud dataproc jobs submit pyspark \
