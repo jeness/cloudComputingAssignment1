@@ -7,3 +7,7 @@ use web ui to submit
 gcloud dataproc jobs submit pyspark \
     --cluster cluster-assign1 --region global \
     gs://ufcloudcomputing/wordCountTwo.py
++ task3
+gcloud dataproc jobs submit pyspark \
+    --cluster cluster-assign1 --region global \
+    gs://ufcloudcomputing/wordCountThree.py
