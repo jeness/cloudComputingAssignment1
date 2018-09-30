@@ -23,7 +23,7 @@ if __name__ == "__main__":
                 index+=1
         return dup
  
-    counts = lines.flatMap(pairs).map(lambda x: (str(x),1)).reduceByKey(add)
+    counts = lines.flatMap(pairs).map(lambda x: (str(x),1)).reduceByKey(add).map(lambda (a, b): (b, a)).sortByKey(0, 1).map(lambda (a, b): (b, a))
     counts.saveAsTextFile("gs://ufcloudcomputing/wordcountTwoOutputFolder/")
 
     sc.stop()

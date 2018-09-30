@@ -33,7 +33,7 @@ object wordCountOne {
  
       val pairs = words.map(word => (word, 1))  // count 1 for word in words
  
-      val wordscount = pairs.reduceByKey(_ + _)  // add up all <key,value> pair with the same key
+      val wordscount = pairs.reduceByKey(_ + _).sortBy(_._2,false)  // add up all <key,value> pair with the same key
       //  val wordscount = pairs.reduceByKey((v1, v2) => v1 + v2)  // same result
  
       wordscount.collect.foreach(println)  // printout result in console, collect will make result be collected to the master

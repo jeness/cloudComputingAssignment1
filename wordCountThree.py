@@ -22,7 +22,7 @@ if __name__ == "__main__":
 # get list of words in word-patterns.txt
     counts2 = dummy.map(lambda x: (str(x),0)).reduceByKey(add)
 # join both and get the count
-    temp = counts.join(counts2).map(lambda x:(x[0],x[1][0]))
+    temp = counts.join(counts2).map(lambda x:(x[0],x[1][0])).map(lambda (a, b): (b, a)).sortByKey(0, 1).map(lambda (a, b): (b, a))
     temp.saveAsTextFile("gs://ufcloudcomputing/wordcountThreeOutputFolder/")
 
 
