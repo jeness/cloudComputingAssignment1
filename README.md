@@ -49,7 +49,7 @@ gcloud dataproc jobs submit pyspark \
     --cluster cluster-assign1 --region global \
     gs://ufcloudcomputing/wordCountTwo.py
 ```
-#### ask 3
+#### Task 3
 Use command line tool to submit
 ```
 gcloud dataproc jobs submit pyspark \
